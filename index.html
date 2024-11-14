@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="main.css">
+  <title>Weather App</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="top-card">
+      <div class="switcher">
+        <p class="ball"></p>
+      </div>
+      <div class="form-elem">
+        <form action="" class="locationForm">
+          <input type="text" name="city" placeholder="Search for any city">
+		  <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+      <div onclick="getLocalWeatherInfo()" class="current-loc-btn"><button> <i class="fa fa-location"></i>  My Location </button></div>
+    </div>
+
+	<p class="curr-weath-err"></p>
+<p class="fut-weath-err"></p>
+	<div class="weather-data">
+		<div class="time-card card">
+			<h2 id="cityName" class="caps"></h2>
+			<p class="time " id="currTime"></p>
+			<span id="currDate"></span>
+		</div>
+		<div class="temp-card card">
+					<div class="item1">
+						<div class="temp">
+							<p class="actual-temp"></p>
+							<p class="perceived-temp"></p>
+						</div>
+						<div class="sun-times">
+							<div class="sun-time">
+								<p><i class="fa fa-sun"></i></p>
+								<div><p>Sunrise</p> <span id="sunrise-time"></span> </div>
+							</div>
+							<div class="sun-time ">
+								<p><i class="fa fa-cloud-sun"></i></p>
+								<div><p>Sunset</p> <span id="sunset-time"></span> </div>
+							</div>
+							
+						</div>
+					</div>
+					
+					<div class="weather-cond-icon item">
+						<p ><img id="curr-weather-icon" src="" alt="" style="width: 200px;"></p>
+						<p id="weatherDesc" class="caps"></p>
+					</div>
+
+					<div class="item3 " >
+						<p><i class="fa fa-water"></i> <span id="currHumidity"></span> <span>Humidity</span> </p>
+						<p><i class="fa fa-tachometer-alt"></i> <span id="currPressure"></span> <span>Pressure</span> </p>
+
+						<p><i class="fa fa-wind"></i> <span id="currWindSp"></span> <span>Wind Speed</span> </p>
+						<p><i class="fa fa-eye"></i> <span id="currVis"></span> <span>Visibility</span> </p>
+					</div>
+
+		</div>
+
+		<div class="daily-forecast card">
+			<h3>3 Days Forecast: </h3>
+			<div class="forcast-items">
+			</div>
+		</div>
+		<div class="hourly-forecast card">
+			<h3>Today's Forecast</h3>
+			<div class="hourly-forecast-items">
+				
+			</div>
+		</div>
+	</div>
+
+	
+
+
+  </div>
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <script src="./index.js"></script>
+</body>
+</html>
