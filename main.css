@@ -278,7 +278,8 @@ body {
 }
 
 
-@media (max-width: 768px) {
+
+@media (max-width: 950px) {
 
   .time-card, .temp-card, .daily-forecast, .hourly-forecast {
     width: 100%;
@@ -322,6 +323,7 @@ body {
  }
 
 }
+
 
 
 
